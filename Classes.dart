@@ -14,14 +14,15 @@ class Person {
 class Employee extends Person {
   final String taxCode;
   final int salary;
+  final double taxFinal;
 
-  Employee({this.taxCode, this.salary});
+  Employee({this.taxFinal, this.taxCode, this.salary});
 }
 
 void main() {
   final person = Person(name: 'Ishaan', age: 20, height: 1.74);
   print(person.describeArrow());
-  final employee = Employee(taxCode: 'AB12', salary: 50000);
+  final employee = Employee(taxFinal: 53256.56, taxCode: 'AB12', salary: 50000);
 
   employee.sayName();
 }
