@@ -22,10 +22,14 @@ class Circle implements Shape {
   double area() => radius * radius * pi;
 }
 
+void printArea(Shape shape) {
+  print(shape.area());
+}
+
 void main() {
   final square = Square(side: 10.0);
-  print(square.area());
+  printArea(square);
 
   final circle = Circle(radius: 5.0);
-  print(circle.area());
+  printArea(circle);
 }
