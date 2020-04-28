@@ -1,7 +1,7 @@
 import 'dart:math';
 
 abstract class Shape {
-  double area();
+  double get area;
 }
 
 class Square implements Shape {
@@ -10,7 +10,7 @@ class Square implements Shape {
   Square({this.side});
 
   @override
-  double area() => side * side;
+  double get area => side * side;
 }
 
 class Circle implements Shape {
@@ -19,11 +19,11 @@ class Circle implements Shape {
   Circle({this.radius});
 
   @override
-  double area() => radius * radius * pi;
+  double get area => radius * radius * pi;
 }
 
 void printArea(Shape shape) {
-  print(shape.area());
+  print(shape.area);
 }
 
 void main() {
